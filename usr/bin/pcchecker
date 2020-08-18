@@ -231,6 +231,7 @@ class Application(Gtk.Window):
         else:
             pw_date = int(str(date.today() - date(int(pw_date[2]), int(pw_date[0]), int(pw_date[1]))).split(' day')[0])
 
+        print(pw_date)
         if 30 >= pw_date :
             cnt += 2
             pw_status = "<span background='green' color='white'><b>안  전</b></span>"
