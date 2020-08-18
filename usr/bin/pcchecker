@@ -225,7 +225,7 @@ class Application(Gtk.Window):
         lbl_pw_name = Gtk.Label()
         lbl_pw_info = Gtk.Label()
 
-        username = subprocess.check_output("logname",shell=True).decode()
+        username = subprocess.check_output("logname",shell=True)
         pw_date = subprocess.check_output("sudo passwd -S "+username+" | awk '{print $3}'", shell=True).decode().split('/')
         print(pw_date)
         if date.today()==date(int(pw_date[2]), int(pw_date[0]), int(pw_date[1])):
